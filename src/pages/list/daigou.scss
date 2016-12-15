@@ -1,0 +1,43 @@
+@import "breakpoint";
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.section-title {
+  text-align: center;
+  margin: 0;
+  color: #999;
+  background: #eee;
+  padding: 10px;
+}
+
+.item-list {
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  vertical-align: top;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+@include screenSizeBiggerThan(mobile) {
+  .item {
+    width: 25%;
+  }
+}
+
+@include screenSizeBiggerThan(tablet) {
+  .item {
+    width: 20%;
+  }
+}
+
+

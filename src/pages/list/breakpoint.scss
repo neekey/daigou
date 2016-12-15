@@ -1,0 +1,79 @@
+$layout-breakpoint-xxs: 480px !default;
+// 8 columns
+$layout-breakpoint-xs: 600px !default;
+// 12 columns
+$layout-breakpoint-sm-tablet: 720px !default;
+$layout-breakpoint-sm: 840px !default;
+$layout-breakpoint-md: 960px !default;
+$layout-breakpoint-lg-tablet: 1024px !default;
+$layout-breakpoint-lg: 1280px !default;
+$layout-breakpoint-xl: 1440px !default;
+$layout-breakpoint-xxl: 1600px !default;
+$layout-breakpoint-xxxl: 1920px !default;
+
+$breakpoints: (
+  "xxs": $layout-breakpoint-xxs,
+  "xs": $layout-breakpoint-xs,
+  "sm-tablet": $layout-breakpoint-sm-tablet,
+  "sm": $layout-breakpoint-sm,
+  "md": $layout-breakpoint-md,
+  "lg-tablet": $layout-breakpoint-lg-tablet,
+  "lg": $layout-breakpoint-lg,
+  "xl": $layout-breakpoint-xl,
+  "xxl": $layout-breakpoint-xxl,
+  "xxxl": $layout-breakpoint-xxxl
+);
+
+$deviceMaxWidth: (
+  "mobile": $layout-breakpoint-sm,
+  "tablet": $layout-breakpoint-md,
+  "desktop": $layout-breakpoint-lg,
+);
+
+$deviceMinWidth: (
+  "mobile": 1px,
+  "tablet": $layout-breakpoint-sm,
+  "desktop": $layout-breakpoint-md,
+);
+
+@mixin screenSize($screenSize) {
+  @if map-has-key($deviceMaxWidth, $screenSize) and map-has-key($deviceMinWidth, $screenSize) {
+    $min-width: map-get($deviceMinWidth, $screenSize);
+    $max-width: map-get($deviceMaxWidth, $screenSize);
+    @media (min-width: $min-width + 1px) and (max-width: $max-width) {
+      @content;
+    }
+  }
+}
+
+@mixin screenSizeBiggerThan($screenSize) {
+  @if map-has-key($breakpoints, $screenSize) {
+    $screenSizeMaxWidth: map-get($breakpoints, $screenSize);
+    @media (min-width: $screenSizeMaxWidth + 1px) {
+      @content;
+    }
+  }
+
+  @if map-has-key($deviceMaxWidth, $screenSize) {
+    $screenSizeMaxWidth: map-get($deviceMaxWidth, $screenSize);
+    @media (min-width: $screenSizeMaxWidth + 1px) {
+      @content;
+    }
+  }
+}
+
+@mixin screenSizeSmallerThan($screenSize) {
+  @if map-has-key($breakpoints, $screenSize) {
+    $screenSizeMinWidth: map-get($breakpoints, $screenSize);
+    @media (max-width: $screenSizeMinWidth - 1px) {
+      @content;
+    }
+  }
+
+  @if map-has-key($deviceMaxWidth, $screenSize) {
+    $screenSizeMinWidth: map-get($deviceMinWidth, $screenSize);
+    @media (max-width: $screenSizeMinWidth - 1px) {
+      @content;
+    }
+  }
+}
