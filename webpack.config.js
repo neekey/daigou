@@ -22,9 +22,6 @@ if (ENV === 'development') {
 }
 
 PLUGINS.push(new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'));
-PLUGINS.push(new webpack.DefinePlugin({
-  'process.env.NODE_ENV': JSON.stringify(ENV)
-}));
 
 PLUGINS.push(new HtmlWebpackPlugin({
   inject: 'body',
@@ -35,18 +32,7 @@ PLUGINS.push(new HtmlWebpackPlugin({
   environment: process.env.NODE_ENV,
 }));
 
-if (ENV === 'production') {
-  PLUGINS.push(new webpack.optimize.UglifyJsPlugin({
-    compress: {
-      warnings: false,
-    },
-    output: {
-      comments: false,
-    },
-  }));
-}
-
-module.exports = {
+var webpackConfig = {
   entry: PAGE_ENTRIES,
   output: {
     path: BUILD_DIR,
@@ -70,7 +56,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: 'style!css?modules&localIdentName=[path][name]---[local]---[hash:base64:5]!sass',
+        loader: 'style!css?module&camelCase&localIdentName=[local]-[hash:5]!sass',
       },
       {
         test: /\.html$/,
@@ -81,8 +67,8 @@ module.exports = {
         loader: 'json',
       },
       {
-        test: /\.(png|jpg)$/,
-        loader: 'url-loader?limit=1024&name=[name]-[hash:8].[ext]!image-webpack',
+        test: /\.(png|jpg|gif|woff|svg|eot|ttf|woff2)$/,
+        loader: 'url-loader?name=[name]-[hash:8].[ext]!image-webpack',
       },
       {
         test: /\.jsx?$/,
@@ -101,3 +87,23 @@ module.exports = {
     },
   },
 };
+
+if (process.env.NODE_ENV === 'production') {
+  webpackConfig.devtool = 'source-map';
+  webpackConfig.plugins = webpackConfig.plugins.concat([
+    // define variable available in code
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production'),
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+      },
+      output: {
+        comments: false,
+      },
+    }),
+  ]);
+}
+
+module.exports = webpackConfig;
