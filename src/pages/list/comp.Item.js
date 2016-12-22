@@ -41,5 +41,5 @@ Item.propTypes = {
   pic: React.PropTypes.string,
   name: React.PropTypes.string,
   price: React.PropTypes.string,
-  postage: React.PropTypes.number,
+  postage: React.PropTypes.any,
 };

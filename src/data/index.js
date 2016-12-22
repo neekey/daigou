@@ -22,6 +22,10 @@ export const data = []
 
 export default function getData({ keyword, tags = [] }, limit) {
   const result = [];
+  let matchers = tags;
+  if (typeof matchers === 'string') {
+    matchers = [matchers];
+  }
 
   data.forEach(item => {
     if (!limit || result.length < limit) {
@@ -32,9 +36,9 @@ export default function getData({ keyword, tags = [] }, limit) {
         }
       }
 
-      if (tags.length) {
+      if (matchers.length) {
         let tagsMatch = true;
-        tags.forEach(tag => {
+        matchers.forEach(tag => {
           if (!item.tags.includes(tag)) {
             tagsMatch = false;
           }

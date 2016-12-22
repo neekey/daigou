@@ -1,0 +1,52 @@
+.container {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.container-open {
+  composes: container;
+  height: 100%;
+
+  .menu {
+    display: block !important;
+  }
+}
+
+.menu {
+  width: 100% !important;
+  margin: 0 !important;
+  background: white !important;
+  display: none !important;
+
+  :global(.item) {
+    border-radius: 0 !important;
+  }
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0 10px;
+  background: white;
+}
+
+.headerTitle {
+  font-size: 18px;
+}
+
+.headerIcon {
+}
+
+.headerSearch {
+  display: none;
+}
+
+.headerSearchIcon {
+}
