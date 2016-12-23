@@ -5,6 +5,8 @@ before_install:
   - sudo add-apt-repository ppa:git-ftp/ppa -y
   - sudo apt-get update -q
   - sudo apt-get install git-ftp -y
+script:
+  - npm run build
 deploy:
   provider: script
   script: deploy.sh
