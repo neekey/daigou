@@ -6,7 +6,7 @@ before_install:
   - sudo apt-get update -q
   - sudo apt-get install git-ftp -y
 script:
-  - npm run build
+  - travis_wait npm run build
 deploy:
   provider: script
   script: deploy.sh
