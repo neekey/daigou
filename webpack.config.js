@@ -68,7 +68,7 @@ var webpackConfig = {
       },
       {
         test: /\.(png|jpg|gif|woff|svg|eot|ttf|woff2)$/,
-        loader: 'url-loader?name=[name]-[hash:8].[ext]!image-webpack',
+        loader: 'file-loader?name=[name]-[hash:8].[ext]!image-webpack',
       },
       {
         test: /\.jsx?$/,
