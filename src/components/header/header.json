@@ -1,33 +1,31 @@
 [
   {
     "name": "婴幼儿奶粉",
-    "postage": 6,
     "tags": ["kids", "formula"]
   },
   {
     "name": "儿童保健 / Bio Island",
-    "postage": 0.5,
+    "revenue": 30,
     "tags": ["bio island"]
   },
   {
     "name": "儿童保健 / Nature's Way",
-    "postage": 0.5,
+    "revenue": 30,
     "tags": ["kids", "nature's Way"]
   },
   {
     "name": "儿童保健 / Blackmores",
-    "postage": 0.5,
+    "revenue": 30,
     "tags": ["kids", "blackmores"]
   },
   {
     "name": "儿童保健 / Bioglan",
-    "postage": 0.5,
+    "revenue": 30,
     "tags": ["kids", "bioglan"]
   },
   {
     "name": "Swisse 保健品",
-    "postage": 0.5,
-    "tags": ["swisse"],
-    "limit": 20
+    "revenue": 30,
+    "tags": ["swisse"]
   }
 ]

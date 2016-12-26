@@ -2,25 +2,30 @@ import React from 'react';
 import Item from './comp.Item';
 import style from './daigou.scss';
 import data from 'src/data/index';
+import config from '../../components/header/header.json';
 
 function getDataForCat(cat) {
   return data({ tags: cat.tags }, cat.limit);
 }
 
 export default function Daigou(props) {
-  const dataQuery = props.location.query;
+  const configId = props.params.id || 0;
+  const dataQuery = config[configId];
   return (<div>
     <div>
       <h3 className={style.sectionTitle}>{dataQuery.name}</h3>
       <ul className={style.itemList}>
         {getDataForCat(dataQuery).map((item, itemKey) =>
           (<li className={style.item} key={itemKey}>
-            <Item {...item} postage={dataQuery.postage} /></li>))}
+            <Item
+              {...item}
+              revenue={item.revenue || dataQuery.revenue}
+              postage={item.postage || dataQuery.postage} /></li>))}
       </ul>
     </div>
   </div>);
 }
 
 Daigou.propTypes = {
-  location: React.PropTypes.object,
+  params: React.PropTypes.object,
 };
