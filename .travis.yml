@@ -8,6 +8,6 @@ script:
   - npm run build
 deploy:
   provider: script
-  script: FTP_BUILD_PATH=$FTP_BUILD_PATH FTP_USERNAME=$FTP_USERNAME FTP_PASSWORD=$FTP_PASSWORD FTP_SERVER_PATH=$FTP_SERVER_PATH FTP_SERVER_PORT=$FTP_SERVER_PORT FTP_SERVER_HOST=$FTP_SERVER_HOST node deploy.js
+  script: node deploy.js
   on:
     branch: master
