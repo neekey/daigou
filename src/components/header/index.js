@@ -52,17 +52,14 @@ export default class Header extends React.Component {
         <Search className={style.headerSearch} />
       </div>
       <Menu vertical secondary className={style.menu}>
-        {pagesLink.map(item => (<Menu.Item
+        {pagesLink.map((item, index) => (<Menu.Item
           key={item.name}
           className={style.menuItem}
           as={Link}
           name={item.name}
           activeClassName="active"
           onClick={this.handleItemClick}
-          to={{
-            pathname: '/list',
-            query: { ...item },
-          }} />))}
+          to={`/list/${index}`} />))}
       </Menu>
     </div>);
   }
