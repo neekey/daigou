@@ -1,1 +1,1 @@
-git ftp catchup -u username -p password --remote-root htdoc/daigou --syncroot build --version --verbose ftp://host.example.com:21
+git ftp catchup -u $FTP_USERNAME -p $FTP_PASSWORD --remote-root $FTP_SERVER_PATH --syncroot $FTP_BUILD_PATH --verbose $FTP_SERVER:$FTP_PORT
