@@ -25,6 +25,7 @@ client.on('greeting', function(msg) {
 });
 client.on('ready', function() {
   var uploadList = getUploadList();
+  var total = uploadList.length;
   var uploadCount = 0;
   var errorList = [];
   uploadList.forEach(function(file) {
@@ -36,10 +37,10 @@ client.on('ready', function() {
         console.error(err.message);
         errorList.push(file);
       } else {
-        console.info(chalk.green('success'), file.local + chalk.grey(' --> ') + file.target);
+        console.info(chalk.green('success'), file.local + chalk.grey(' --> ') + file.target, chalk.grey('( ' + uploadCount + '/' + total + ' )'));
       }
 
-      if (uploadCount === uploadList) {
+      if (uploadCount === total) {
         client.end();
         if (errorList.length === 0) {
           console.info(chalk.green('All files uploaded!'));
