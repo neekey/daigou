@@ -2,16 +2,12 @@ language: node_js
 node_js:
   - node
 branches:
-  only: 
+  only:
     - master
-before_install:
-  - sudo add-apt-repository ppa:git-ftp/ppa -y
-  - sudo apt-get update -q
-  - sudo apt-get install git-ftp -y
 script:
   - npm run build
 deploy:
   provider: script
-  script: deploy.sh
+  script: FTP_BUILD_PATH=$FTP_BUILD_PATH FTP_USERNAME=$FTP_USERNAME FTP_PASSWORD=$FTP_PASSWORD FTP_SERVER_PATH=$FTP_SERVER_PATH FTP_SERVER_PORT=$FTP_SERVER_PORT FTP_SERVER_HOST=$FTP_SERVER_HOST node deploy.js
   on:
     branch: master
