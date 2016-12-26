@@ -46,6 +46,9 @@ function matchFileFromServer(filename, serverList, ext) {
 function getSyncList(localList, serverList) {
   const syncList = [];
   localList.forEach(filename => {
+    if (/\.map$/.test(filename)) {
+      return;
+    }
     if (/\.(jpg|png|ttf|eot|woff|woff2|svg|)$/.test(filename)) {
       var actualFilename = getActuallFilename(filename);
       var extension = path.extname(filename);

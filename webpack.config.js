@@ -89,7 +89,6 @@ var webpackConfig = {
 };
 
 if (process.env.NODE_ENV === 'production') {
-  webpackConfig.devtool = 'source-map';
   webpackConfig.plugins = webpackConfig.plugins.concat([
     // define variable available in code
     new webpack.DefinePlugin({
