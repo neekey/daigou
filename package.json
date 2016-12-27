@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "NODE_ENV=production node ./node_modules/webpack/bin/webpack --config webpack.config.js",
-    "dev": "NODE_ENV=development node ./node_modules/webpack-dev-server/bin/webpack-dev-server --host 0.0.0.0 --progress --colors --hot --inline --content-base=build  --history-api-fallback",
+    "dev": "NODE_ENV=development SITE_BASE=/ node ./node_modules/webpack-dev-server/bin/webpack-dev-server --host 0.0.0.0 --progress --colors --hot --inline --content-base=build  --history-api-fallback",
     "test": "./node_modules/.bin/mocha-webpack --opts ./test/mocha-webpack.opts --watch",
     "test:browser": "NODE_ENV=development node ./node_modules/webpack-dev-server/bin/webpack-dev-server --host 0.0.0.0 --devtool eval --config test/webpack.config.test.browser.js --progress --colors --hot --inline --content-base test  --history-api-fallback"
   },
@@ -71,12 +71,12 @@
     "webpack-node-externals": "^1.2.0"
   },
   "dependencies": {
-    "ftp": "^0.3.10",
+    "classnames": "^2.2.5",
     "ejs-loader": "^0.3.0",
+    "font-awesome": "^4.7.0",
+    "ftp": "^0.3.10",
     "history": "^2.0.0",
     "html-webpack-plugin": "^2.24.1",
-    "react-lazyload": "^2.2.0",
-    "semantic-ui-css": "^2.2.4",
-    "semantic-ui-react": "^0.62.3"
+    "react-lazyload": "^2.2.0"
   }
 }
