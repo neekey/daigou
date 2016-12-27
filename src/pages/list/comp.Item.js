@@ -23,10 +23,17 @@ function getSalePrice(originalPrice, postage, revenue) {
   return ceilForInteger(Math.ceil(cost + parseInt(revenue, 10)));
 }
 
+function convertImageURLToLocalName(pic) {
+  return pic
+    .replace(/https?:\/\/static\.chemistwarehouse\.com\.au\//, '')
+    .replace(/\//g, '_')
+    .replace(/\.(jpg|png)$/, '');
+}
+
 function getLocalImagesAddress(pic) {
-  let picURL = pic;
+  let picURL = convertImageURLToLocalName(pic);
   images.forEach(image => {
-    if (image.match(pic)) {
+    if (image.match(picURL)) {
       picURL = image;
     }
   });

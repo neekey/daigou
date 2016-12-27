@@ -15,8 +15,8 @@ export default function Daigou(props) {
     <div>
       <h3 className={style.sectionTitle}>{dataQuery.name}</h3>
       <ul className={style.itemList}>
-        {getDataForCat(dataQuery).map((item, itemKey) =>
-          (<li className={style.item} key={itemKey}>
+        {getDataForCat(dataQuery).map((item) =>
+          (<li className={style.item} key={item.id}>
             <Item
               {...item}
               revenue={item.revenue || dataQuery.revenue}
