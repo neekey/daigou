@@ -33,6 +33,7 @@ PLUGINS.push(new HtmlWebpackPlugin({
 }));
 
 var webpackConfig = {
+  devtool: 'source-map',
   entry: PAGE_ENTRIES,
   output: {
     path: BUILD_DIR,
