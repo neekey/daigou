@@ -4,7 +4,7 @@ import { Router, useRouterHistory } from 'react-router';
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 import { Provider } from 'react-redux';
 import { createHistory } from 'history';
-import 'semantic-ui-css/semantic.css';
+import 'font-awesome/css/font-awesome.css';
 import Main from './main';
 import Store from './store';
 import ListRoute from './pages/list/route';

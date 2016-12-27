@@ -9,27 +9,19 @@ const BUILD_DIR = path.resolve(__dirname, 'build');
 const PLUGINS = [];
 const PAGE_ENTRIES = {
   index: path.resolve(SRC_DIR, 'index.js'),
-  vendor: [
-    'babel-polyfill',
-    'react',
-    'react-dom',
-    'react-router',
-  ],
 };
 
 if (ENV === 'development') {
   PAGE_ENTRIES['webpack-dev-server'] = 'webpack/hot/dev-server';
 }
 
-PLUGINS.push(new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'));
-
 PLUGINS.push(new HtmlWebpackPlugin({
   inject: 'body',
   template: '!!ejs!src/index.ejs',
   filename: 'index.html',
-  chunks: ['vendor', 'index'],
+  chunks: ['index'],
   chunksSortMode: 'dependency',
-  environment: process.env.NODE_ENV,
+  env: process.env,
 }));
 
 var webpackConfig = {
@@ -37,7 +29,7 @@ var webpackConfig = {
   entry: PAGE_ENTRIES,
   output: {
     path: BUILD_DIR,
-    filename: '[name].js',
+    filename: '[name].[hash].js',
   },
   resolve: {
     root: ROOT_DIR,
@@ -68,7 +60,7 @@ var webpackConfig = {
         loader: 'json',
       },
       {
-        test: /\.(png|jpg|gif|woff|svg|eot|ttf|woff2)$/,
+        test: /\.(png|jpg|gif|woff|svg|eot|ttf|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: 'file-loader?name=[name]-[hash:8].[ext]!image-webpack',
       },
       {

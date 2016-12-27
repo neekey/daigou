@@ -4,10 +4,10 @@ var fs = require('fs');
 var path = require('path');
 var ENV = process.env;
 var BUILD_PATH = path.resolve(__dirname, ENV.FTP_BUILD_PATH || 'build');
-var TARGET_PATH = ENV.FTP_SERVER_PATH || 'htdocs/daigou';
-var USERNAME = ENV.FTP_USERNAME || 'qxu1589780199';
-var PASSWORD = ENV.FTP_PASSWORD || 'aA306598288';
-var HOST = ENV.FTP_SERVER_HOST || 'qxu1589780199.my3w.com';
+var TARGET_PATH = ENV.FTP_SERVER_PATH;
+var USERNAME = ENV.FTP_USERNAME;
+var PASSWORD = ENV.FTP_PASSWORD;
+var HOST = ENV.FTP_SERVER_HOST;
 var PORT = ENV.FTP_SERVER_PORT || 21;
 
 function getUploadList(serverList) {

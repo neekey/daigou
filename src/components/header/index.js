@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { Menu, Icon } from 'semantic-ui-react';
 import style from './header.scss';
 import pagesLink from './header.json';
-
+import classnames from 'classnames';
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -42,23 +41,21 @@ export default class Header extends React.Component {
       onClick={this.handleContainerClick}
       className={this.state.open ? style.containerOpen : style.container}>
       <div className={style.header}>
-        <Icon
-          className={style.headerIcon}
-          name={this.state.open ? 'close' : 'content'}
-          size="large"
+        <i
+          className={classnames(
+            style.headerIcon,
+            this.state.open ? 'fa fa-close' : 'fa fa-bars')}
           onClick={this.toggleMenuOpen} />
         <span className={style.headerTitle}>Neekey 澳洲直邮代购</span>
       </div>
-      <Menu vertical secondary className={style.menu}>
-        {pagesLink.map((item, index) => (<Menu.Item
+      <div className={style.menu}>
+        {pagesLink.map((item, index) => (<Link
           key={item.name}
           className={style.menuItem}
-          as={Link}
-          name={item.name}
-          activeClassName="active"
-          onClick={this.handleItemClick}
-          to={`/list/${index}`} />))}
-      </Menu>
+          activeClassName={style.menuItemActive}
+          to={`/list/${index}`}
+          onClick={this.handleItemClick}>{item.name}</Link>))}
+      </div>
     </div>);
   }
 }

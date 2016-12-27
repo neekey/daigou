@@ -12,19 +12,35 @@
   height: 100%;
 
   .menu {
-    display: block !important;
+    display: block;
   }
 }
 
 .menu {
-  width: 100% !important;
-  margin: 0 !important;
-  background: white !important;
-  display: none !important;
+  width: 100%;
+  margin: 0;
+  background: white;
+  display: none;
+  list-style: none;
+  padding: 0;
+}
 
-  :global(.item) {
-    border-radius: 0 !important;
+.menu-item {
+  vertical-align: middle;
+  text-decoration: none;
+  display: block;
+  line-height: 40px;
+  padding: 0 13px;
+  color: rgba(0,0,0,.95);
+  font-size: 14px;
+
+  &:hover {
+    background: rgba(0,0,0,.05);
   }
+}
+
+.menu-item-active {
+  background: rgba(0,0,0,.05);
 }
 
 
@@ -46,6 +62,7 @@
 }
 
 .headerIcon {
+  font-size: 22px;
 }
 
 .headerSearch {
