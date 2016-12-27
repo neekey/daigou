@@ -20,7 +20,6 @@ function AUDToRMB(aud) {
 
 function getSalePrice(originalPrice, postage, revenue) {
   const cost = AUDToRMB(parseFloat(originalPrice) + parseFloat(postage));
-  console.log(cost, revenue);
   return ceilForInteger(Math.ceil(cost + parseInt(revenue, 10)));
 }
 

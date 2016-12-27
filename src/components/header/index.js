@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { Menu, Icon, Search } from 'semantic-ui-react';
+import { Menu, Icon } from 'semantic-ui-react';
 import style from './header.scss';
 import pagesLink from './header.json';
 
