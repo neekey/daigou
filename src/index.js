@@ -10,7 +10,7 @@ import Store from './store';
 import ListRoute from './pages/list/route';
 
 let history = useRouterHistory(createHistory)({
-  basename: document.head.baseURI,
+  basename: process.env.SITE_BASE || document.head.baseURI,
 });
 
 Store.addReducers({
