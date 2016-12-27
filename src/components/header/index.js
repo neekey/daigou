@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { Menu, Icon, Search } from 'semantic-ui-react';
+import { Menu, Icon } from 'semantic-ui-react';
 import style from './header.scss';
 import pagesLink from './header.json';
 
@@ -48,8 +48,6 @@ export default class Header extends React.Component {
           size="large"
           onClick={this.toggleMenuOpen} />
         <span className={style.headerTitle}>Neekey 澳洲直邮代购</span>
-        <Icon className={style.headerSearchIcon} name="search" size="large" />
-        <Search className={style.headerSearch} />
       </div>
       <Menu vertical secondary className={style.menu}>
         {pagesLink.map((item, index) => (<Menu.Item

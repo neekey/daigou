@@ -1,5 +1,7 @@
 import React from 'react';
 import style from './comp.Item.scss';
+import LazyLoad from 'react-lazyload';
+import placeholderImg from './placeholder.png';
 
 function requireAll(requireContext) {
   return requireContext.keys().map(requireContext);
@@ -18,7 +20,6 @@ function AUDToRMB(aud) {
 
 function getSalePrice(originalPrice, postage, revenue) {
   const cost = AUDToRMB(parseFloat(originalPrice) + parseFloat(postage));
-  console.log(cost, revenue);
   return ceilForInteger(Math.ceil(cost + parseInt(revenue, 10)));
 }
 
@@ -35,10 +36,13 @@ function getLocalImagesAddress(pic) {
 
 export default function Item(props) {
   return (<div className={style.container}>
-    <div className={style.imgContainer}>
-      <img className={style.img} src={getLocalImagesAddress(props.pic)} alt={props.name} /></div>
+    <LazyLoad
+      once
+      placeholder={<img className={style.imgPlaceholder} src={placeholderImg} alt={props.name} />}>
+      <img className={style.img} src={getLocalImagesAddress(props.pic)} alt={props.name} />
+    </LazyLoad>
     <p className={style.name}>{props.name}</p>
-    <p className={style.price}>{getSalePrice(props.price, props.postage, props.revenue)}</p>
+    <p className={style.price}>{`¥${getSalePrice(props.price, props.postage, props.revenue)}`}</p>
   </div>);
 }
 
