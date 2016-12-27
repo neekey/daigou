@@ -81,12 +81,15 @@ var webpackConfig = {
   },
 };
 
+webpackConfig.plugins = webpackConfig.plugins.concat([
+  // define variable available in code
+  new webpack.DefinePlugin({
+    'process.env.SITE_BASE': JSON.stringify(process.env.SITE_BASE),
+  })
+]);
+
 if (process.env.NODE_ENV === 'production') {
   webpackConfig.plugins = webpackConfig.plugins.concat([
-    // define variable available in code
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production'),
-    }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false,
