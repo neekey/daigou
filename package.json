@@ -75,7 +75,7 @@
     "ejs-loader": "^0.3.0",
     "font-awesome": "^4.7.0",
     "ftp": "^0.3.10",
-    "history": "^2.0.0",
+    "history": "^4.0.0",
     "html-webpack-plugin": "^2.24.1",
     "react-lazyload": "^2.2.0"
   }
