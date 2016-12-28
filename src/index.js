@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import { Router, useRouterHistory } from 'react-router';
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 import { Provider } from 'react-redux';
-import { createHistory } from 'history';
+import createHistory from 'history/lib/createBrowserHistory';
 import 'font-awesome/css/font-awesome.css';
 import Main from './main';
 import Store from './store';
