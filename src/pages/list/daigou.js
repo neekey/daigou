@@ -19,6 +19,7 @@ export default function Daigou(props) {
           (<li className={style.item} key={item.id}>
             <Item
               {...item}
+              name={item.chinese_name || item.name}
               revenue={item.revenue || dataQuery.revenue}
               postage={item.postage || dataQuery.postage} /></li>))}
       </ul>
