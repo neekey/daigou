@@ -1,60 +1,9 @@
 [
   {
-    "id": "63148",
-    "pic": "https://static.chemistwarehouse.com.au/ams/media/productimages/63148/original.jpg",
-    "name": " Aptamil Gold+ 3 Toddler Nutritional Supplement From 1 year 900g",
-    "price": "21",
-    "link": "/buy/63148/Aptamil-Gold-3-Toddler-Nutritional-Supplement-From-1-year-900g",
-    "postage": "5",
-    "tags": [
-      "aptamil",
-      "formula",
-      "kids"
-    ]
-  },
-  {
-    "id": "73142",
-    "pic": "https://static.chemistwarehouse.com.au/ams/media/productimages/73142/original.jpg",
-    "name": " Aptamil Profutura Toddler Nutritional Supplement From 1 year 900g",
-    "price": "26",
-    "link": "/buy/73142/Aptamil-Profutura-Toddler-Nutritional-Supplement-From-1-year-900g",
-    "postage": "5.6",
-    "tags": [
-      "aptamil",
-      "formula",
-      "kids"
-    ]
-  },
-  {
-    "id": "63150",
-    "pic": "https://static.chemistwarehouse.com.au/ams/media/productimages/63150/original.jpg",
-    "name": " Aptamil Gold+ 4 Junior Nutritional Supplement From 2 years 900g",
-    "price": "21",
-    "link": "/buy/63150/Aptamil-Gold-4-Junior-Nutritional-Supplement-From-2-years-900g",
-    "postage": "5",
-    "tags": [
-      "aptamil",
-      "formula",
-      "kids"
-    ]
-  },
-  {
-    "id": "76992",
-    "pic": "https://static.chemistwarehouse.com.au/ams/media/productimages/76992/original.jpg",
-    "name": " Aptamil Profutura Junior Nutritional Supplement 900g",
-    "price": "26",
-    "link": "/buy/76992/Aptamil-Profutura-Junior-Nutritional-Supplement-900g",
-    "postage": "5.6",
-    "tags": [
-      "aptamil",
-      "formula",
-      "kids"
-    ]
-  },
-  {
     "id": "63092",
     "pic": "https://static.chemistwarehouse.com.au/ams/media/productimages/63092/original.jpg",
     "name": " Aptamil Gold+ 1 Infant Formula 0-6 Months 900g",
+    "chinese_name": "爱他美金装一段 0-6月 900g",
     "price": "24.8",
     "link": "/buy/63092/Aptamil-Gold-1-Infant-Formula-0-6-Months-900g",
     "postage": "5.3",
@@ -68,8 +17,51 @@
     "id": "63093",
     "pic": "https://static.chemistwarehouse.com.au/ams/media/productimages/63093/original.jpg",
     "name": " Aptamil Gold+ 2 Follow-On Formula 6-12 Months 900g",
+    "chinese_name": "爱他美金装二段 6-12月 900g",
     "price": "24.8",
     "link": "/buy/63093/Aptamil-Gold-2-Follow-On-Formula-6-12-Months-900g",
+    "postage": "5.3",
+    "tags": [
+      "aptamil",
+      "formula",
+      "kids"
+    ]
+  },
+  {
+    "id": "63148",
+    "pic": "https://static.chemistwarehouse.com.au/ams/media/productimages/63148/original.jpg",
+    "name": " Aptamil Gold+ 3 Toddler Nutritional Supplement From 1 year 900g",
+    "chinese_name": "爱他美金装三段 1岁起 900g",
+    "price": "21",
+    "link": "/buy/63148/Aptamil-Gold-3-Toddler-Nutritional-Supplement-From-1-year-900g",
+    "postage": "5",
+    "tags": [
+      "aptamil",
+      "formula",
+      "kids"
+    ]
+  },
+  {
+    "id": "63150",
+    "pic": "https://static.chemistwarehouse.com.au/ams/media/productimages/63150/original.jpg",
+    "name": " Aptamil Gold+ 4 Junior Nutritional Supplement From 2 years 900g",
+    "chinese_name": "爱他美金装四段 2岁起 900g",
+    "price": "21",
+    "link": "/buy/63150/Aptamil-Gold-4-Junior-Nutritional-Supplement-From-2-years-900g",
+    "postage": "5",
+    "tags": [
+      "aptamil",
+      "formula",
+      "kids"
+    ]
+  },
+  {
+    "id": "73141",
+    "pic": "https://static.chemistwarehouse.com.au/ams/media/productimages/73141/original.jpg",
+    "name": " Aptamil Profutura Infant Formula 0-6 months 900g",
+    "chinese_name": "爱他美铂金一段 0-6月 900g",
+    "price": "30",
+    "link": "/buy/73141/Aptamil-Profutura-Infant-Formula-0-6-months-900g",
     "postage": "5.3",
     "tags": [
       "aptamil",
@@ -81,6 +73,7 @@
     "id": "73140",
     "pic": "https://static.chemistwarehouse.com.au/ams/media/productimages/73140/original.jpg",
     "name": " Aptamil Profutura Follow On Formula 6-12 months 900g",
+    "chinese_name": "爱他美铂金二段 6-12月 900g",
     "price": "30",
     "link": "/buy/73140/Aptamil-Profutura-Follow-On-Formula-6-12-months-900g",
     "postage": "5.3",
@@ -91,9 +84,38 @@
     ]
   },
   {
+    "id": "73142",
+    "pic": "https://static.chemistwarehouse.com.au/ams/media/productimages/73142/original.jpg",
+    "name": " Aptamil Profutura Toddler Nutritional Supplement From 1 year 900g",
+    "chinese_name": "爱他美铂金三段 一岁起 900g",
+    "price": "26",
+    "link": "/buy/73142/Aptamil-Profutura-Toddler-Nutritional-Supplement-From-1-year-900g",
+    "postage": "5.6",
+    "tags": [
+      "aptamil",
+      "formula",
+      "kids"
+    ]
+  },
+  {
+    "id": "76992",
+    "pic": "https://static.chemistwarehouse.com.au/ams/media/productimages/76992/original.jpg",
+    "name": " Aptamil Profutura Junior Nutritional Supplement 900g",
+    "chinese_name": "爱他美铂金四段 2岁后 900g",
+    "price": "26",
+    "link": "/buy/76992/Aptamil-Profutura-Junior-Nutritional-Supplement-900g",
+    "postage": "5.6",
+    "tags": [
+      "aptamil",
+      "formula",
+      "kids"
+    ]
+  },
+  {
     "id": "68815",
     "pic": "https://static.chemistwarehouse.com.au/ams/media/productimages/68815/original.jpg",
     "name": " Karicare Aptamil Gold De-Lact Lactose Free Infant Formula From Birth 0-12 Months 900g",
+    "chinese_name": "爱他美金装无乳糖防腹泻 适合乳糖不耐宝宝 0-12月 900g",
     "price": "24.8",
     "link": "/buy/68815/Karicare-Aptamil-Gold-De-Lact-Lactose-Free-Infant-Formula-From-Birth-0-12-Months-900g",
     "tags": [
@@ -106,32 +128,9 @@
     "id": "66535",
     "pic": "https://static.chemistwarehouse.com.au/ams/media/productimages/66535/original.jpg",
     "name": " Karicare Aptamil AR Thickened Infant Formula From Birth 0-12 Months 900g",
+    "chinese_name": "爱他美金装防打嗝防吐配方奶粉 0-12月 900g",
     "price": "23.95",
     "link": "/buy/66535/Karicare-Aptamil-AR-Thickened-Infant-Formula-From-Birth-0-12-Months-900g",
-    "tags": [
-      "aptamil",
-      "formula",
-      "kids"
-    ]
-  },
-  {
-    "id": "68814",
-    "pic": "https://static.chemistwarehouse.com.au/ams/media/productimages/68814/original.jpg",
-    "name": "Aptamil Gold+ 2 AllerPro Follow-On Formula 6-12 Months 900g",
-    "price": "26.69",
-    "link": "/buy/68814/Karicare-Aptamil-Gold-2-AllerPro-Follow-On-Formula-6-12-Months-900g",
-    "tags": [
-      "aptamil",
-      "formula",
-      "kids"
-    ]
-  },
-  {
-    "id": "65557",
-    "pic": "https://static.chemistwarehouse.com.au/ams/media/productimages/65557/original.jpg",
-    "name": "Aptamil Feed Thickener 380g",
-    "price": "16.69",
-    "link": "/buy/65557/Karicare-Aptamil-Feed-Thickener-380g",
     "tags": [
       "aptamil",
       "formula",
@@ -142,8 +141,22 @@
     "id": "68813",
     "pic": "https://static.chemistwarehouse.com.au/ams/media/productimages/68813/original.jpg",
     "name": " Aptamil Gold+ 1 AllerPro Infant Formula From Birth 0-6 Months 900g",
+    "chinese_name": "爱他美金装深度水解奶粉防过敏一段 0-6月 900g",
     "price": "26.69",
     "link": "/buy/68813/Karicare-Aptamil-Gold-1-AllerPro-Infant-Formula-From-Birth-0-6-Months-900g",
+    "tags": [
+      "aptamil",
+      "formula",
+      "kids"
+    ]
+  },
+  {
+    "id": "68814",
+    "pic": "https://static.chemistwarehouse.com.au/ams/media/productimages/68814/original.jpg",
+    "name": "Aptamil Gold+ 2 AllerPro Follow-On Formula 6-12 Months 900g",
+    "chinese_name": "爱他美金装深度水解奶粉防过敏二段 6-12月 900g",
+    "price": "26.69",
+    "link": "/buy/68814/Karicare-Aptamil-Gold-2-AllerPro-Follow-On-Formula-6-12-Months-900g",
     "tags": [
       "aptamil",
       "formula",
@@ -154,21 +167,9 @@
     "id": "63149",
     "pic": "https://static.chemistwarehouse.com.au/ams/media/productimages/63149/original.jpg",
     "name": "Aptamil Gold+ HA Infant Formula From Birth 0-12 Months 900g",
+    "chinese_name": "爱他美金装部分水解奶粉防过敏 0-12月 900g",
     "price": "24.69",
     "link": "/buy/63149/Karicare-Aptamil-Gold-HA-Infant-Formula-From-Birth-0-12-Months-900g",
-    "tags": [
-      "aptamil",
-      "formula",
-      "kids"
-    ]
-  },
-  {
-    "id": "73141",
-    "pic": "https://static.chemistwarehouse.com.au/ams/media/productimages/73141/original.jpg",
-    "name": " Aptamil Profutura Infant Formula 0-6 months 900g",
-    "price": "30",
-    "link": "/buy/73141/Aptamil-Profutura-Infant-Formula-0-6-months-900g",
-    "postage": "5.3",
     "tags": [
       "aptamil",
       "formula",
