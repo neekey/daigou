@@ -11,7 +11,7 @@ import ListRoute from './pages/list/route';
 import PostageRoute from './pages/postage/route';
 
 let history = useRouterHistory(createHistory)({
-  basename: process.env.SITE_BASE || document.head.baseURI,
+  basename: `${document.location.protocol}://${document.location.host}`,
 });
 
 Store.addReducers({
