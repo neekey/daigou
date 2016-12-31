@@ -54,7 +54,9 @@ export default class Daigou extends React.Component {
       </div>
 
       {this.state.imagePreviewOpen ?
-        <ImagePreview url={this.state.currentURL} onRequestClose={this.onImagePreviewClose} /> : null}
+        <ImagePreview
+          url={this.state.currentURL}
+          onRequestClose={this.onImagePreviewClose} /> : null}
     </div>);
   }
 }
