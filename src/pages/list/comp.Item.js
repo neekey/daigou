@@ -2,6 +2,7 @@ import React from 'react';
 import style from './comp.Item.scss';
 import LazyLoad from 'react-lazyload';
 import placeholderImg from './placeholder.png';
+const isSource = document.location.host.includes('-source');
 
 function requireAll(requireContext) {
   return requireContext.keys().map(requireContext);
@@ -19,8 +20,11 @@ function AUDToRMB(aud) {
 }
 
 function getSalePrice(originalPrice, postage, revenue) {
+  if (isSource) {
+    return `$${originalPrice}`;
+  }
   const cost = AUDToRMB(parseFloat(originalPrice) + parseFloat(postage));
-  return ceilForInteger(Math.ceil(cost + parseInt(revenue, 10)));
+  return `¥${ceilForInteger(Math.ceil(cost + parseInt(revenue, 10)))}`;
 }
 
 function convertImageURLToLocalName(pic) {
@@ -52,7 +56,7 @@ export default function Item(props) {
         src={getLocalImagesAddress(props.pic)}
         alt={props.name} />
     </LazyLoad>
-    <p className={style.price}>{`¥${getSalePrice(props.price, props.postage, props.revenue)}`}</p>
+    <p className={style.price}>{getSalePrice(props.price, props.postage, props.revenue)}</p>
     <p className={style.name}>{props.name}</p>
   </div>);
 }
