@@ -1,0 +1,19 @@
+.container {
+  padding: 15px;
+  text-align: center;
+
+  h3 {
+    margin: 0;
+  }
+
+  ul {
+    padding: 0;
+    text-align: left;
+    list-style-position: inside;
+  }
+}
+
+.qrcode {
+  max-width: 400px;
+  max-height: 400px;
+}
