@@ -53,7 +53,7 @@ export default class Header extends React.Component {
           key={item.name}
           className={style.menuItem}
           activeClassName={style.menuItemActive}
-          to={`/list/${index}`}
+          to={item.path ? item.path : `/list/${index}`}
           onClick={this.handleItemClick}>{item.name}</Link>))}
       </div>
     </div>);

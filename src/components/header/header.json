@@ -1,27 +1,51 @@
 [
   {
-    "name": "婴幼儿奶粉",
-    "tags": ["kids", "formula"]
+    "name": "购买和邮资须知",
+    "path": "/postage"
   },
   {
-    "name": "儿童保健 / Bio Island",
-    "revenue": 30,
-    "tags": ["bio island"]
+    "name": "婴幼儿奶粉",
+    "tags": ["formula"]
   },
   {
     "name": "儿童保健 / Nature's Way",
     "revenue": 30,
-    "tags": ["kids", "nature's Way"]
-  },
-  {
-    "name": "儿童保健 / Blackmores",
-    "revenue": 30,
-    "tags": ["kids", "blackmores"]
+    "tags": ["natures_way"]
   },
   {
     "name": "儿童保健 / Bioglan",
     "revenue": 30,
-    "tags": ["kids", "bioglan"]
+    "tags": ["bioglan"]
+  },
+  {
+    "name": "Bio Island 生物岛",
+    "revenue": 30,
+    "tags": ["bio_island"]
+  },
+  {
+    "name": "Elevit 爱乐维 孕妇保健",
+    "revenue": 40,
+    "tags": ["elevit"]
+  },
+  {
+    "name": "Life Space 益生菌",
+    "revenue": 30,
+    "tags": ["life_space"]
+  },
+  {
+    "name": "Floradix 铁元",
+    "revenue": 30,
+    "tags": ["floradix"]
+  },
+  {
+    "name": "Ostelin 钙片",
+    "revenue": 30,
+    "tags": ["ostelin"]
+  },
+  {
+    "name": "Blackmores 澳佳宝",
+    "revenue": 30,
+    "tags": ["blackmores"]
   },
   {
     "name": "Swisse 保健品",

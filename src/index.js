@@ -8,6 +8,7 @@ import 'font-awesome/css/font-awesome.css';
 import Main from './main';
 import Store from './store';
 import ListRoute from './pages/list/route';
+import PostageRoute from './pages/postage/route';
 
 let history = useRouterHistory(createHistory)({
   basename: process.env.SITE_BASE || document.head.baseURI,
@@ -23,10 +24,11 @@ const rootRoute = {
   path: '/',
   component: Main,
   indexRoute: {
-    onEnter: (nextState, replace) => replace('/list/0'),
+    onEnter: (nextState, replace) => replace('/list/1'),
   },
   childRoutes: [
     ListRoute,
+    PostageRoute,
   ],
 };
 
