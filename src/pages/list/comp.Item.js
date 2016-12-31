@@ -46,10 +46,14 @@ export default function Item(props) {
     <LazyLoad
       once
       placeholder={<img className={style.imgPlaceholder} src={placeholderImg} alt={props.name} />}>
-      <img className={style.img} src={getLocalImagesAddress(props.pic)} alt={props.name} />
+      <img
+        onClick={() => props.onImageClick(props.pic)}
+        className={style.img}
+        src={getLocalImagesAddress(props.pic)}
+        alt={props.name} />
     </LazyLoad>
-    <p className={style.name}>{props.name}</p>
     <p className={style.price}>{`¥${getSalePrice(props.price, props.postage, props.revenue)}`}</p>
+    <p className={style.name}>{props.name}</p>
   </div>);
 }
 
@@ -59,9 +63,11 @@ Item.propTypes = {
   price: React.PropTypes.string,
   postage: React.PropTypes.any,
   revenue: React.PropTypes.string,
+  onImageClick: React.PropTypes.func,
 };
 
 Item.defaultProps = {
   revenue: '50',
   postage: '0',
+  onImageClick: () => {},
 };

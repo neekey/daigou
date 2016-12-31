@@ -24,7 +24,7 @@ const rootRoute = {
   path: '/',
   component: Main,
   indexRoute: {
-    onEnter: (nextState, replace) => replace('/list/0'),
+    onEnter: (nextState, replace) => replace('/list/1'),
   },
   childRoutes: [
     ListRoute,

@@ -24,8 +24,23 @@
   },
   {
     "name": "Elevit 爱乐维 孕妇保健",
+    "revenue": 40,
+    "tags": ["elevit"]
+  },
+  {
+    "name": "Life Space 益生菌",
     "revenue": 30,
-    "tags": ["Elevit"]
+    "tags": ["life_space"]
+  },
+  {
+    "name": "Floradix 铁元",
+    "revenue": 30,
+    "tags": ["floradix"]
+  },
+  {
+    "name": "Ostelin 钙片",
+    "revenue": 30,
+    "tags": ["ostelin"]
   },
   {
     "name": "Blackmores 澳佳宝",
