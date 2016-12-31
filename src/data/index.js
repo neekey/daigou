@@ -1,24 +1,11 @@
-import a2Data from './a2.json';
-import aptamilData from './aptamil.json';
-import bellamyData from './bellamy.json';
-import bioIslandData from './bio_island.json';
-import bioglanData from './bioglan.json';
-import blackmores from './blackmores.json';
-import karicareData from './karicare.json';
-import natures from './natures_way.json';
-import swisse from './swisse.json';
+function requireAll(requireContext) {
+  return requireContext.keys().map(requireContext);
+}
+// requires and returns all modules that match
 
-
-export const data = []
-  .concat(a2Data)
-  .concat(aptamilData)
-  .concat(bellamyData)
-  .concat(bioIslandData)
-  .concat(bioglanData)
-  .concat(karicareData)
-  .concat(swisse)
-  .concat(blackmores)
-  .concat(natures);
+const products = requireAll(require.context('src/data/products', true, /.*[^(\.raw)]\.json$/));
+let data = [];
+products.forEach(product => (data = data.concat(product)));
 
 export default function getData({ keyword, tags = [] }, limit) {
   const result = [];
@@ -26,12 +13,13 @@ export default function getData({ keyword, tags = [] }, limit) {
   if (typeof matchers === 'string') {
     matchers = [matchers];
   }
+  const keywordEx = keyword ? new RegExp(keyword, 'i') : null;
 
   data.forEach(item => {
     if (!limit || result.length < limit) {
       let match = true;
-      if (keyword) {
-        if (data.name.indexOf(keyword) < 0) {
+      if (keywordEx) {
+        if (!keywordEx.test(item.name)) {
           match = false;
         }
       }

@@ -61,7 +61,7 @@ var webpackConfig = {
       },
       {
         test: /\.(png|jpg|gif|woff|svg|eot|ttf|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'file-loader?name=[name]-[hash:8].[ext]!image-webpack',
+        loader: 'file-loader?name=[name]-[hash:8].[ext]',
       },
       {
         test: /\.jsx?$/,
@@ -73,12 +73,6 @@ var webpackConfig = {
     ],
   },
   plugins: PLUGINS,
-  imageWebpackLoader: {
-    pngquant: {
-      quality: '65-90',
-      speed: 4,
-    },
-  },
 };
 
 webpackConfig.plugins = webpackConfig.plugins.concat([

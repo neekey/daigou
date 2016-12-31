@@ -1,0 +1,47 @@
+[
+  {
+    "name": "swisse",
+    "url": "http://www.chemistwarehouse.com.au/Shop-OnLine/587/Swisse?size=120",
+    "tags": ["swisse"]
+  },
+  {
+    "name": "bio_island",
+    "url": "http://www.chemistwarehouse.com.au/Shop-Online/2128/Bio-Island",
+    "tags": ["bio_island"]
+  },
+  {
+    "name": "natures_way",
+    "url": "http://www.chemistwarehouse.com.au/Shop-Online/1423/Nature-s-Way-Kids",
+    "tags": ["natures_way"]
+  },
+  {
+    "name": "blackmores",
+    "url": "http://www.chemistwarehouse.com.au/Shop-OnLine/513/Blackmores?size=120",
+    "tags": ["blackmores"]
+  },
+  {
+    "name": "bioglan",
+    "url": "http://www.chemistwarehouse.com.au/Shop-Online/1498/Bioglan-Children-s-Health",
+    "tags": ["bioglan"]
+  },
+  {
+    "name": "life_space",
+    "url": "http://www.chemistwarehouse.com.au/Shop-Online/2187/Life-Space",
+    "tags": ["life_space"]
+  },
+  {
+    "name": "ostelin",
+    "url": "http://www.chemistwarehouse.com.au/Shop-Online/903/Ostelin",
+    "tags": ["ostelin"]
+  },
+  {
+    "name": "elevit",
+    "url": "http://www.chemistwarehouse.com.au/Shop-Online/945/Elevit-Menevit",
+    "tags": ["elevit"]
+  },
+  {
+    "name": "floradix",
+    "url": "http://www.chemistwarehouse.com.au/Shop-Online/2381/Floradix",
+    "tags": ["floradix"]
+  }
+]

@@ -5,7 +5,7 @@ import data from 'src/data/index';
 import config from '../../components/header/header.json';
 
 function getDataForCat(cat) {
-  return data({ tags: cat.tags }, cat.limit);
+  return data({ tags: cat.tags, keyword: cat.keyword }, cat.limit);
 }
 
 export default function Daigou(props) {
