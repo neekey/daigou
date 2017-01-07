@@ -20,11 +20,12 @@ function AUDToRMB(aud) {
 }
 
 function getSalePrice(originalPrice, postage, revenue) {
-  if (isSource) {
-    return `$${originalPrice}`;
-  }
   const cost = AUDToRMB(parseFloat(originalPrice) + parseFloat(postage));
-  return `¥${ceilForInteger(Math.ceil(cost + parseInt(revenue, 10)))}`;
+  const salePrice = `¥${ceilForInteger(Math.ceil(cost + parseInt(revenue, 10)))}`;
+  if (isSource) {
+    return `$${originalPrice} ${salePrice}`;
+  }
+  return salePrice;
 }
 
 function convertImageURLToLocalName(pic) {
