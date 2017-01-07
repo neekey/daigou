@@ -60,6 +60,7 @@
     "mustache": "^2.2.1",
     "node-sass": "^3.7.0",
     "npm": "^4.0.5",
+    "phantomjs-prebuilt": "^2.1.14",
     "react": "^15.1.0",
     "react-addons-test-utils": "^15.1.0",
     "react-dom": "^15.1.0",
