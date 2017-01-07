@@ -112,8 +112,11 @@ function getDescriptionForList(list, done) {
 
 getCompleteProductListFromURL(baseURL, [], function(list){
   console.log('get complete list', list.length);
-  getDescriptionForList(list, function(result){
-    fs.write(filepath, JSON.stringify(result), 'w');
-    phantom.exit();
-  });
+  // getDescriptionForList(list, function(result){
+  //   fs.write(filepath, JSON.stringify(result), 'w');
+  //   phantom.exit();
+  // });
+
+  fs.write(filepath, JSON.stringify(list), 'w');
+  phantom.exit();
 });
