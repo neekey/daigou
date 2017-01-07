@@ -29,7 +29,7 @@ var webpackConfig = {
   entry: PAGE_ENTRIES,
   output: {
     path: BUILD_DIR,
-    filename: '[name].[hash].js',
+    filename: '[name].[hash:8].js',
   },
   resolve: {
     root: ROOT_DIR,
