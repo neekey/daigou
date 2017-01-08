@@ -13,6 +13,11 @@
     "tags": ["bellamy-s-organic"]
   },
   {
+    "name": "成人奶粉 A2 / 德运",
+    "revenue": 30,
+    "tags": ["adult_formula"]
+  },
+  {
     "name": "儿童保健 / Nature's Way",
     "revenue": 30,
     "tags": ["natures_way"]

@@ -1,9 +1,14 @@
 function requireAll(requireContext) {
-  return requireContext.keys().map(requireContext);
+  return requireContext.keys().map((key) => {
+    if (key.indexOf('.raw.json') < 0) {
+      return requireContext(key);
+    }
+    return [];
+  });
 }
 // requires and returns all modules that match
 
-const products = requireAll(require.context('src/data/products', true, /.*[^(\.raw)]\.json$/));
+const products = requireAll(require.context('src/data/products', true, /.*\.json$/));
 let data = [];
 products.forEach(product => (data = data.concat(product)));
 
