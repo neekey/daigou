@@ -6,16 +6,14 @@ var fs = require('fs');
 var chalk = require('chalk');
 var PHANTOM_EXEC_PATH = path.resolve(__dirname, '../node_modules/.bin/phantomjs');
 var targetDataPath = path.resolve(__dirname, '../src/data/products');
-var targetImagePath = path.resolve(__dirname, '../src/images');
 var jobScriptPath = path.resolve(__dirname, './phantom_task.js');
-var fetchImages = require('./fetchImg');
 
 function execProduct(product, filepath, callback) {
   console.log(chalk.blue('start to fetch product ' + product.name));
   var child = exec(PHANTOM_EXEC_PATH + ' ' + jobScriptPath + ' ' + product.url + ' ' + filepath, function(err) {
     if (!err) {
       var products = require(filepath);
-      fetchProductImages(products, callback);
+      callback(null, products);
     } else {
       callback(err);
     }
@@ -41,10 +39,6 @@ function execNextProduct(callback) {
     console.log(chalk.blue('all products are finished'));
     callback();
   }
-}
-
-function fetchProductImages(products, callback) {
-  fetchImages(products, targetImagePath, callback);
 }
 
 function updatePriceAndDescription() {
