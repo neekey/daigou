@@ -17,27 +17,32 @@
   {
     "name": "blackmores",
     "url": "http://www.chemistwarehouse.com.au/Shop-OnLine/513/Blackmores?size=120",
-    "tags": ["blackmores"]
+    "tags": ["blackmores"],
+    "translate": true
   },
   {
     "name": "bioglan",
     "url": "http://www.chemistwarehouse.com.au/Shop-Online/1498/Bioglan-Children-s-Health",
-    "tags": ["bioglan"]
+    "tags": ["bioglan"],
+    "translate": true
   },
   {
     "name": "life_space",
     "url": "http://www.chemistwarehouse.com.au/Shop-Online/2187/Life-Space",
-    "tags": ["life_space"]
+    "tags": ["life_space"],
+    "translate": true
   },
   {
     "name": "ostelin",
     "url": "http://www.chemistwarehouse.com.au/Shop-Online/903/Ostelin",
-    "tags": ["ostelin"]
+    "tags": ["ostelin"],
+    "translate": true
   },
   {
     "name": "elevit",
     "url": "http://www.chemistwarehouse.com.au/Shop-Online/945/Elevit-Menevit",
-    "tags": ["elevit"]
+    "tags": ["elevit"],
+    "translate": true
   },
   {
     "name": "floradix",
@@ -47,6 +52,7 @@
   {
     "name": "bellamy",
     "url": "http://www.chemistwarehouse.com.au/Shop-Online/1387/Bellamy-s-Organic",
-    "tags": ["bellamy-s-organic"]
+    "tags": ["bellamy-s-organic"],
+    "translate": true
   }
 ]
