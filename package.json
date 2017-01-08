@@ -6,6 +6,7 @@
   "scripts": {
     "clear": "rm -fr build",
     "fetch_data": "node data/dataFetch.js",
+    "fetch_images": "node data/fetchAllImgs.js",
     "build": "NODE_ENV=production node ./node_modules/webpack/bin/webpack --config webpack.config.js",
     "dev": "NODE_ENV=development SITE_BASE=/ node ./node_modules/webpack-dev-server/bin/webpack-dev-server --host 0.0.0.0 --progress --colors --hot --inline --content-base=build  --history-api-fallback",
     "test": "./node_modules/.bin/mocha-webpack --opts ./test/mocha-webpack.opts --watch",
