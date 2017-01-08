@@ -9,7 +9,7 @@ function requireAll(requireContext) {
 }
 // requires and returns all modules that match
 
-const images = requireAll(require.context('src/images', true, /.*\.jpg$/));
+const images = requireAll(require.context('src/images', true, /.*\.(jpg|png)$/));
 
 function ceilForInteger(price) {
   return Math.ceil(price / 10) * 10;
@@ -30,7 +30,7 @@ function getSalePrice(originalPrice, postage, revenue) {
 
 function convertImageURLToLocalName(pic) {
   return pic
-    .replace(/https?:\/\/static\.chemistwarehouse\.com\.au\//, '')
+    .replace(/^https?:\/\/[^\/]+\//, '')
     .replace(/\//g, '_')
     .replace(/\.(jpg|png)$/, '');
 }
