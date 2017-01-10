@@ -12,7 +12,8 @@ function requireAll(requireContext) {
 const images = requireAll(require.context('src/images', true, /.*\.(jpg|png)$/));
 
 function ceilForInteger(price) {
-  return Math.ceil(price / 10) * 10;
+  const modulo = price % 5;
+  return Math.floor(price / 5) * 5 + (modulo ? 5 : 0);
 }
 
 function AUDToRMB(aud) {
