@@ -17,6 +17,7 @@ function getProductListFromURL(url, callback) {
         var selectorProductImage = '.product-image img';
         var selectorProductPrice = '.Price';
         var selectorNextPage = '.next-page';
+        var selectorPriceDropDown = '.product-image .product_image_overlay';
 
         var nextPageEl = document.querySelector(selectorNextPage);
         var productList = document.querySelector(selectorProductListContainer).querySelectorAll(selectorProductList);
@@ -27,6 +28,7 @@ function getProductListFromURL(url, callback) {
         var idInput = null;
         var img = null;
         var priceEl = null;
+        var priceDropdown = null;
 
         for(var index = 0; index < productList.length; index++) {
           product = productList[index];
@@ -34,6 +36,7 @@ function getProductListFromURL(url, callback) {
           idInput = product.querySelector(selectorProductId);
           img = product.querySelector(selectorProductImage);
           priceEl = product.querySelector(selectorProductPrice);
+          priceDropdown = !!product.querySelector(selectorPriceDropDown);
           if (link && idInput && img && priceEl) {
             productListData.push({
               id: idInput.value,
@@ -41,6 +44,7 @@ function getProductListFromURL(url, callback) {
               name: link.getAttribute('title'),
               link: link.getAttribute('href'),
               price: priceEl.innerHTML.trim().replace('$', ''),
+              priceDroppedDown: priceDropdown,
             });
           }
         }

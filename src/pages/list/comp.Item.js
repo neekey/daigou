@@ -20,11 +20,11 @@ function AUDToRMB(aud) {
   return aud * 5.1;
 }
 
-function getSalePrice(originalPrice, postage, revenue) {
+function getSalePrice(originalPrice, postage, revenue, postOfficePrice) {
   const cost = AUDToRMB(parseFloat(originalPrice) + parseFloat(postage));
   const salePrice = `¥${ceilForInteger(Math.ceil(cost + parseInt(revenue, 10)))}`;
   if (isSource) {
-    return `$${originalPrice} ${salePrice}`;
+    return `$${originalPrice} ${salePrice} ${postOfficePrice || ''}`;
   }
   return salePrice;
 }
@@ -49,6 +49,7 @@ function getLocalImagesAddress(pic) {
 
 export default function Item(props) {
   return (<div className={style.container}>
+    {props.priceDroppedDown ? <span className={style.sales}>低价</span> : null}
     <LazyLoad
       once
       placeholder={<img className={style.imgPlaceholder} src={placeholderImg} alt={props.name} />}>
@@ -58,7 +59,8 @@ export default function Item(props) {
         src={getLocalImagesAddress(props.pic)}
         alt={props.name} />
     </LazyLoad>
-    <p className={style.price}>{getSalePrice(props.price, props.postage, props.revenue)}</p>
+    <p className={style.price}>
+      {getSalePrice(props.price, props.postage, props.revenue, props.postOfficePrice)}</p>
     <p className={style.name}>{props.name}</p>
   </div>);
 }
@@ -70,6 +72,8 @@ Item.propTypes = {
   postage: React.PropTypes.any,
   revenue: React.PropTypes.string,
   onImageClick: React.PropTypes.func,
+  postOfficePrice: React.PropTypes.string,
+  priceDroppedDown: React.PropTypes.bool,
 };
 
 Item.defaultProps = {

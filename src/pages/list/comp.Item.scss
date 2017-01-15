@@ -1,5 +1,5 @@
 .container {
-
+  position: relative;
 }
 
 .img-container {
@@ -27,4 +27,17 @@
   color: #f40;
   margin: 0;
   margin-top: 5px;
+}
+
+.sales {
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  background: red;
+  color: yellow;
+  border-radius: 50%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  width: 50px;
 }

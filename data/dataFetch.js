@@ -60,8 +60,8 @@ function updatePriceAndDescription() {
           if (targetItem.id === item.id) {
             match = true;
             targetItem.price = item.price;
-            targetItem.description = item.description;
             targetItem.tags = item.tags;
+            targetItem.priceDroppedDown = item.priceDroppedDown;
           }
         });
 
