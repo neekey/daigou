@@ -28,5 +28,6 @@ deploy:
     local-dir: s3build
     upload-dir: product
     acl: public_read
+    region: ap-southeast-2
     on:
       repo: neekey/daigou
