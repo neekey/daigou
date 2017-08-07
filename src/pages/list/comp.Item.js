@@ -17,7 +17,7 @@ function ceilForInteger(price) {
 }
 
 function AUDToRMB(aud) {
-  return aud * 5.3;
+  return aud * 5.4;
 }
 
 function getSalePrice(originalPrice, postage, revenue, postOfficePrice) {
