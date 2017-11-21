@@ -33,9 +33,24 @@
     "pic": "https://static.chemistwarehouse.com.au/ams/media/productimages/69967/original.jpg",
     "name": " A2 Premium Toddler Stage 3 900g",
     "chinese_name": "A2铂金三段 1岁后 900g",
-    "price": "35",
+    "price": "38",
     "postOfficePrice": "25.8",
     "link": "/buy/69967/A2-Premium-Toddler-Stage-3-900g",
+    "postage": "6.5",
+    "tags": [
+      "a2",
+      "formula",
+      "kids"
+    ]
+  },
+  {
+    "id": "69967",
+    "pic": "https://static.chemistwarehouse.com.au/ams/media/productimages/84994/original.jpg",
+    "name": " A2 Premium Junior Stage 4 900g",
+    "chinese_name": "A2铂金四段 3岁后 900g",
+    "price": "32",
+    "postOfficePrice": "32",
+    "link": "/buy/84994/A2-Junior-Stage-4-900g",
     "postage": "6.5",
     "tags": [
       "a2",
