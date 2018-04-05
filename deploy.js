@@ -171,6 +171,11 @@ client.on('greeting', function(msg) {
 client.on('ready', function() {
   client.list(TARGET_PATH, function(err, serverList) {
     console.log(chalk.green('get list from server.'));
+    if (err) {
+      console.error(chalk.red('error getting list from server'));
+      console.error(err.message);
+      throw err;
+    }
     var targetList = getSyncTargets(serverList);
     var uploadList = targetList.uploadList;
     var deleteList = targetList.deleteList;
