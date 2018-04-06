@@ -261,4 +261,5 @@ client.connect({
   port: PORT,
   user: USERNAME,
   password: PASSWORD,
+  secure: true,
 });
