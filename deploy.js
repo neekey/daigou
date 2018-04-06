@@ -174,9 +174,9 @@ client.on('ready', function() {
     if (err) {
       console.error(chalk.red('error getting list from server'));
       console.error(err.message);
-      throw err;
+      // throw err;
     }
-    var targetList = getSyncTargets(serverList);
+    var targetList = getSyncTargets(serverList || []);
     var uploadList = targetList.uploadList;
     var deleteList = targetList.deleteList;
     var uploadSuccess = [];
