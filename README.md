@@ -1,4 +1,4 @@
-# react-webpack-spa
+# Daigou
 A demo for building a SPA using React and build with webpack.
 
 [Demo](http://neekey.github.io/react-webpack-spa/build/)
