@@ -1,39 +1,31 @@
 language: node_js
 node_js:
-  - node
+- node
 branches:
   only:
-    - master
+  - master
 cache:
   directories:
-  - node_modules # NPM packages
+  - node_modules
 before_install:
-  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-  - sudo apt-get -qq update
-  - sudo apt-get -qq install g++-4.8
+- sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+- sudo apt-get -qq update
+- sudo apt-get -qq install g++-4.8
 env:
-  - CXX=g++-4.8
+- CXX=g++-4.8
 script:
-  - npm run clear
-  - npm run fetch_data
-  - npm run fetch_images
-  - npm run s3_data
-  - npm run build
+- npm run clear
+- npm run fetch_data
+- npm run fetch_images
+- npm run s3_data
+- npm run build
 deploy:
-  - provider: script
-    skip_cleanup: true
-    script: node deploy.js
-    on:
-      branch: master
-  - provider: s3
-    skip_cleanup: true
-    access_key_id: AKIAIJR6BIZCFGQXJVLQ
-    secret_access_key:
-      secure: kT1T33NL0NE4pbhNRrQWGrSmCdKozJvQnZNjzIbwMHhGtUK5FdDPmr4q89s5KKYuelbJaKOTWdwaf/J/djOQ9W3NvlVxvf2l41SlWAM3lf57TpE8xww2dEzK+ycjJuUWNGsURTJzwavnF1d8H+3r4EBD2mGyHwEpE7yuIcPzLsahw7C35MBlvKPH+x7JAr8tBNpzQKqM1IISdg4mIEFzkFX25WPnWSKG/0473sMAyP6bURyYBj0k4VjkCXA0r6iKsXGkgVYCaA2jt/cpl9Lx50Mk+UNY9nSAExvWmWNaCeihYlivl10UiWYA81rayoAAfLHAJ7BucGnkTPveK32ponyxXgVToSRpzBxvuq/AVTVHKE48gqCE3Kr2M9T/SLA9oqUrrOqyPmb7184jSauP8WEF7o0C6Ozw2AEsMWyD2QKgtwl8Wns9FGnA4tz6m64Z4TsYqtca2jKgH1L1nfwjZo+CQD2gFTtLoCtpruDiO5BzctFEm4WDuY1oIblwtnt3Ci5q4QhFe9O/7VpI98vUW8fubjrm3CIusf38NYTJyJ0gU5aDJG7cPzaspGf+n5Mm5fp60w2r0RSsrBc99a+5qoXVZqsw7BUXPoYQtpX7TS9olPIF3UDTEMgjvewZZIWVQ8PPg02igg3uQTg4LCPVnQsbp2LVZmW37r8ph5f9l+I=
-    bucket: neekey-daigou
-    local-dir: s3build
-    upload-dir: product
-    acl: public_read
-    region: ap-southeast-2
-    on:
-      repo: neekey/daigou
+- provider: s3
+  skip_cleanup: true
+  local_dir: build
+  bucket: daigou.neekey.net
+  region: ap-southeast-2
+  access_key_id:
+    secure: YECTKb9XaPljyHgAFfMfUcYB9TKLL++2AB7bsEkJyZ/tbe2WTpRSqWBWd977yR/p1f0+Uwv+xPlRTvOYxvR8iwOnfLyHp+57OlEsT+baA5r7paP25MrdjQxLD6AclUpekarZKmsykxvC8Ndu3BczlZajZG1bllKX/2wQP/tt0X1WaGKp6Wqnn3iOk8GQaDKaA7F0dYQDvzITH9KlDkGc48DHA2CGb89uvd0JOpH6/HCQof8GnrgoRBptowf0/mUT/L9TZ2jcQ0eQGRA3fDFXptm4ALQgP0k53SnTUdbOn6ons/8gX08+T5OB58LT6eLUFn0UKyuGzkcXQeKcPAaz/4q2WG7epfhAxr++BPk4oXszzk//hXeHpOpyzXtAQy7qXFeKOpnJNVGcq/vREWZyfNS2JfSnp/cHYdrLYxZQ/lYZNxZkfmpWyh5iGEU1CjFtH6xoSLbMB/O5+/l9KrO5UalU2IG5FkqJNCFRTgKA8JuquTA+8H9mASKyvS9OIp+wNKKjQzgw7W/jzhdLKeO3TpXMIqNuQKVvTCUti3G/g+S06kfj0/mcEXZHy/Y7bB4H+ovS/TPSmzbMW6KuVt6EJH9asv5tfRpK46uKba3T42zUupEiRmUd23mjyUihJWbI6Omi8IhgHIW6Bx++ecRO2Mk4KFLY4sjRhAb48dfIdAs=
+  secret_access_key:
+    secure: SRYkGKKBuAaqS1X0H9S11U/G0+TloD9sqBxCgd6kHwH50Rned/OcoC2vYy6qepapvhtPwXXSuP/2sBQ3Y3eTxGI86rYkKQ3mfrCH5tQKGHULxKHOqZ9je5IXPymcYr77KJvw5R978I+wAudCxkYkqsEdOAgONpkNx4/xqyaBsCK6Y5OJyjoCerww22Jt84WL33mA9I6eeZkX7BsMZ0X+vxTu9guphqKA+CCFIwqHbZXYu7YS+Ljr/3oAF6f0XmbKKEH32nMiJVMXhpGwjKEd11mqnOr3uu4gal3/3X17UQ92ao5Emwlfne+ftXbRuLcKesxHGDVyBZ5U/Zjd5R6ZTD3UhT7xoFTIOL2kQ7LGgR1VDmvnT7JMH5vHtlITL163MUrLwGdxqzHo0c3NUYzUf/uASlY4NOzvHE1OX7TC69sSnYUYBTeTMdfG/08maH29K3HSycftbkD7EhSR6sPUiu4wgPHSAyJlsHNJWlRJ2/5oXKdTer086mkGDJYwN8YU2nbJfYUvjD01s5UQ6yDiAZz12GMQz4I6fzeEt3Jw5Mrsry8ZksnY0u8VN2czMccZA+8WgXpEg/et3GBWmGQAOiCXOE6nTLLWu3l1RSWcS6HB2lKyPwg84p+WcF9arwNKKw8yAAQfk8ThOI4dYF7EJhs61QR5XOl7TBcBaQVybJM=
