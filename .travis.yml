@@ -17,7 +17,6 @@ script:
 - npm run clear
 - npm run fetch_data
 - npm run fetch_images
-- npm run s3_data
 - npm run build
 deploy:
 - provider: s3

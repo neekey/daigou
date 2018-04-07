@@ -61,5 +61,10 @@
     "name": "Swisse 保健品",
     "revenue": 30,
     "tags": ["swisse"]
+  },
+  {
+    "name": "其他",
+    "revenue": 30,
+    "tags": ["aerogard"]
   }
 ]
